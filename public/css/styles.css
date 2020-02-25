@@ -1,9 +1,10 @@
 body {
-  height: 100%
+  height: 100%;
   width: 100%;
   font-family: 'Raleway';
-  background: url("https://commons.wikimedia.org/wiki/File:Spinning_globe.gif")
+  background-image: url("https://commons.wikimedia.org/wiki/File:Spinning_globe.gif")
 }
+
 
 img {
   width: 20%;
@@ -12,6 +13,10 @@ img {
 
 h1, h2 {
   text-align: center;
+}
+
+.neighbours {
+  display: flex;
 }
 
 .selector {
@@ -30,6 +35,12 @@ h1, h2 {
   padding: 10px
 }
 
+.display-container img {
+  margin: 0 auto;
+  width: 50%;
+  height: auto
+}
+
 section {
   margin-top: 30px;
   display: flex;
@@ -41,7 +52,7 @@ section {
 section img{
   height: 100%;
   width: auto;
-  margin: 5px;
+  margin: 0;
   border: 1px solid black;
 }
 
@@ -57,7 +68,7 @@ section img{
 
 .overlay {
   position: absolute;
-  top: 0;
+  top: 1px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -65,7 +76,7 @@ section img{
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: grey;
 }
 
 .container:hover .overlay {
@@ -75,7 +86,7 @@ section img{
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   position: absolute;
   top: 50%;
   left: 50%;

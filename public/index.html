@@ -18,9 +18,12 @@
 
       <div class="display-container" v-if="countryIndex != null">
         <h1>{{selectedCountry.name}}</h1>
-        <h2>{{selectedCountry.capital}}</h2>
+        <h2>Capital: {{selectedCountry.capital}}</h2>
         <h2>Population: {{selectedCountry.population}}</h2>
         <img :src="selectedCountry.flag">
+        <div class="neighbours" v-for="neighbour in selectedCountry.borders">
+          <span>{{neighbour}}</span>
+        </div>
         <button v-on:click="addToFavourites">Add to Favourites</button>
       </div>
 
